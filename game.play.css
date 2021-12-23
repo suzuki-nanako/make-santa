@@ -1,0 +1,99 @@
+.santa.left.stand { background-image: url(image/svg/santa_left_stand_one.svg); }
+.santa.left.run { background-image: url(image/svg/santa_left_run_one.svg); }
+.santa.right.stand { background-image: url(image/svg/santa_right_stand_one.svg); }
+.santa.right.run { background-image: url(image/svg/santa_right_run_one.svg); }
+
+body.two .santa.left.stand { background-image: url(image/svg/santa_left_stand_two.svg); }
+body.two .santa.left.run { background-image: url(image/svg/santa_left_run_two.svg); }
+body.two .santa.right.stand { background-image: url(image/svg/santa_right_stand_two.svg); }
+body.two .santa.right.run { background-image: url(image/svg/santa_right_run_two.svg); }
+
+body.three .santa.left.stand { background-image: url(image/svg/santa_left_stand_three.svg); }
+body.three .santa.left.run { background-image: url(image/svg/santa_left_run_three.svg); }
+body.three .santa.right.stand { background-image: url(image/svg/santa_right_stand_three.svg); }
+body.three .santa.right.run { background-image: url(image/svg/santa_right_run_three.svg); }
+
+body.four .santa.left.stand { background-image: url(image/svg/santa_left_stand_four.svg); }
+body.four .santa.left.run { background-image: url(image/svg/santa_left_run_four.svg); }
+body.four .santa.right.stand { background-image: url(image/svg/santa_right_stand_four.svg); }
+body.four .santa.right.run { background-image: url(image/svg/santa_right_run_four.svg); }
+
+body.five .santa.left.stand { background-image: url(image/svg/santa_left_stand_five.svg); }
+body.five .santa.left.run { background-image: url(image/svg/santa_left_run_five.svg); }
+body.five .santa.right.stand { background-image: url(image/svg/santa_right_stand_five.svg); }
+body.five .santa.right.run { background-image: url(image/svg/santa_right_run_five.svg); }
+
+.santa{
+    position: absolute;
+    left: 40vw;
+    top: 60vh;
+    width: 100px;
+    height: 100px;
+    /* background-size: 200px 400px; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.santa img{
+    position: absolute;
+}
+
+
+.button {
+    position: absolute;
+    width: 20vw;
+    bottom: 10vw;
+    pointer-events: visible;
+}
+.button.left{
+    left: 22vw;
+}
+.button.right{
+    right: 22vw;
+}
+
+.clothes{
+    position: absolute;
+    left: 48vw;
+    top: 10vw;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+}
+
+.clothes.yes { background-image: url(image/yes_clothes.svg); }
+.clothes.not { background-image: url(image/not_clothes.svg); }
+
+
+/* タイマー */
+
+.timer {
+    position: absolute;
+    top: 10vw;
+    right: 26vw;
+    left: 26vw;
+    padding: 4px;
+    background-color: white;
+    color: black;
+    border: 5px;
+    border-color: black;
+    border-radius: 30px;
+    font-size: 5vw;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* スコア */
+
+.clothes.hit {
+    display: none;
+}
+
+.scoreBoard {
+    position: absolute;
+    background-color: rgb(30, 83, 255);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    
+}

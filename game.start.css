@@ -1,0 +1,40 @@
+
+.scene.start {
+    background-color: rgb(184, 255, 243);
+}
+.startbutton {
+    position: absolute;
+    right: 8vw;
+    left: 8vw;
+    bottom: 8vw;
+    padding: 5vw;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    pointer-events: visible;
+}
+
+.img.start {
+    position: absolute;
+    top: 42vw;
+    left: 9vw;
+    width: 90vw;
+}
+.snow {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 10vw;
+    top: 10vw;
+    background-color: #fff;
+    border-radius: 10px;
+}
+.title {
+    position: absolute;
+    width: 70vw;
+    top: 8vw;
+    left: 50vw;
+    margin-left: -35vw;
+}
+
+

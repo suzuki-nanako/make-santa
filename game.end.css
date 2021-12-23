@@ -1,0 +1,23 @@
+.scene.end {
+    background-color: rgb(184, 255, 243);
+    text-align: center;
+}
+
+body.one .result{ background-image: url(image/svg/result_one.svg); }
+body.two .result{ background-image: url(image/svg/result_two.svg); }
+body.three .result{ background-image: url(image/svg/result_three.svg); }
+body.four .result{ background-image: url(image/svg/result_four.svg); }
+body.five .result{ background-image: url(image/svg/result_five.svg); }
+
+.result {
+    height: 65vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-top: 10vh;
+    margin-bottom: 6vh;
+}
+
+.back {
+    width: 70vw;
+}
