@@ -248,6 +248,7 @@ requestId = requestAnimationFrame(calcTime);
 
 const back = document.querySelector(".back");
 back.ontouchstart = handleBack;
+back.onmousedown = handleBack;
 
 function handleBack (){
     console.log("押された");

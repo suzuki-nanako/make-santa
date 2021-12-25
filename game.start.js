@@ -17,6 +17,19 @@ button.ontouchstart = function() {
     window.app.timelimit = Date.now() + convertToMS(0, 0, 40);
     window.app.isGameStarted = true;
 }
+button.onmousedown = function() {
+    sceneStart.classList.add('hidden');
+
+    const convertToMS = function(h, m, s) {
+        return (
+            (h * 60 * 60 * 1000) + 
+            (m      * 60 * 1000) +
+            (s           * 1000)
+        );
+    };
+    window.app.timelimit = Date.now() + convertToMS(0, 0, 40);
+    window.app.isGameStarted = true;
+}
 
 // 雪を複製する
 
