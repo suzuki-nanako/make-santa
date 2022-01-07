@@ -1,4 +1,4 @@
-const santa = document.querySelector('.santa')
+const santa = document.querySelector('.santa');
 
 const buttonLeft = document.querySelector('.button.left');
 const buttonRight = document.querySelector('.button.right');
