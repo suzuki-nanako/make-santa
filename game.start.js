@@ -1,12 +1,11 @@
 const snow = document.querySelector('.snow');
-
 const sceneStart = document.querySelector('.scene.start');
 const button = document.querySelector('.startbutton');
 
 // スタートボタンで隠す
+
 const hideStartScene = function() {
     sceneStart.classList.add('hidden');
-
     const convertToMS = function(h, m, s) {
         return (
             (h * 60 * 60 * 1000) + 
@@ -14,6 +13,7 @@ const hideStartScene = function() {
             (s           * 1000)
         );
     };
+
     window.app.timelimit = Date.now() + convertToMS(0, 0, 40);
     window.app.isGameStarted = true;
 };
@@ -54,22 +54,18 @@ const animateSnow = function() {
         const xMax = window.innerWidth + 20;
         const yMax = window.innerHeight + 20;
         
-        // x += Math.random() * 10;
         y += Math.random() * 5;
         
         if (xMax <= x) {
             x -= xMax;
-        }
-        
-        if (yMax <= y) {
+        } if (yMax <= y) {
             y -= yMax;
         }
         
         snow.style.left = `${x}px`;
         snow.style.top = `${y}px`;
     }
-    
+
     requestAnimationFrame(animateSnow);
 };
-
 requestAnimationFrame(animateSnow);
