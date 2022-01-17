@@ -1,6 +1,6 @@
 const app = {
-    score:0,
-    timelimit:0,
+    score: 0,
+    timelimit: 0,
     isGameStarted:false,
 };
 

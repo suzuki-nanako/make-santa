@@ -19,34 +19,35 @@ document.addEventListener('touchend', function(event){
 
 let x = 40;
 let santaSpeed = 0;
-const handleButtonLeftDown =function(event) {
+
+const handleButtonLeftDown = function(event) {
     event.preventDefault();
     console.log('左ボタンが押されています!');
     santaSpeed = -0.5;
-    santa.classList.remove('right' , 'stand');
-    santa.classList.add('left','run');
+    santa.classList.remove('right', 'stand');
+    santa.classList.add('left', 'run');
 };
-const handleButtonLeftUp =function(event) {
+const handleButtonLeftUp = function(event) {
     event.preventDefault();
     santaSpeed = 0;
     santa.classList.remove('run');
     santa.classList.add('stand');
 };
 
-const handleButtonRightDown =function(event) {
+const handleButtonRightDown = function(event) {
     event.preventDefault();
     santaSpeed = 0.5;
-    santa.classList.remove('left' , 'stand');
-    santa.classList.add('right','run');
+    santa.classList.remove('left', 'stand');
+    santa.classList.add('right', 'run');
 };
-const handleButtonRightUp =function(event) {
+const handleButtonRightUp = function(event) {
     event.preventDefault();
     santaSpeed = 0;
     santa.classList.remove('run');
     santa.classList.add('stand');
 };
 
-const moveSanta =  function() {
+const moveSanta = function() {
     x += santaSpeed ;
     santa.style.left = `${x}vw`;
     requestAnimationFrame(moveSanta);
@@ -68,6 +69,7 @@ santa.className = 'santa left stand one';
 
 // 服を複製する
 const clothesList = [];
+
 for (let count = 0; count < 10; count += 1) {
     const clothes = document.createElement('div');
     clothes.classList.add('clothes');
@@ -110,11 +112,11 @@ const scoreDiv = document.querySelector('.scoreBoard');
 let score = 0;
 
 scoreDiv.innerHTML = score;
-
 const animateClothes = function() {
     
     requestAnimationFrame(animateClothes);
-    if(!window.app.isGameStarted) {
+
+    if (!window.app.isGameStarted) {
         return;
     }
 
@@ -146,11 +148,10 @@ const animateClothes = function() {
         } else {
             clothesY += Math.random() * 7;
             clothes.style.top = `${clothesY}px`;
-        } if (50 < c) {
+        } 
+        if (50 < c) {
             continue;
         }
-
-        
 
         if (
             clothes.classList.contains('hit')
@@ -173,23 +174,23 @@ const animateClothes = function() {
         scoreDiv.innerHTML = score;
         if (50 <= score) {
             console.log('level5');
-            document.body.classList.remove('one','two','three','four');
+            document.body.classList.remove('one', 'two', 'three', 'four');
             document.body.classList.add('five');
         } else if (35 <= score) {
             console.log('level4');
-            document.body.classList.remove('one','two','three','five');
+            document.body.classList.remove('one', 'two', 'three', 'five');
             document.body.classList.add('four');
         } else if (25 <= score) {
             console.log('level3');
-            document.body.classList.remove('one','two','three','four','five');
+            document.body.classList.remove('one', 'two', 'three', 'four', 'five');
             document.body.classList.add('three');
         } else if (10 <= score) {
             console.log('level2');
-            document.body.classList.remove('one','two','three','four','five');
+            document.body.classList.remove('one', 'two', 'three', 'four', 'five');
             document.body.classList.add('two');
         } else {
             console.log('level1');
-            document.body.classList.remove('one','two','three','four','five');
+            document.body.classList.remove('one', 'two', 'three', 'four', 'five');
             document.body.classList.add('one');
         }
                     
@@ -223,7 +224,7 @@ const showTime = function(t) {
 
 let requestId;
 
-const calcTime = function() {  
+const calcTime = function() {
     requestId = requestAnimationFrame(calcTime);
     if (window.app.isGameStarted) {
         const currentTime = Date.now();

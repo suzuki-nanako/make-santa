@@ -58,7 +58,8 @@ const animateSnow = function() {
         
         if (xMax <= x) {
             x -= xMax;
-        } if (yMax <= y) {
+        } 
+        if (yMax <= y) {
             y -= yMax;
         }
         
