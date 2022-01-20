@@ -23,7 +23,7 @@ body.five .santa.left.run { background-image: url(image/svg/santa_left_run_five.
 body.five .santa.right.stand { background-image: url(image/svg/santa_right_stand_five.svg); }
 body.five .santa.right.run { background-image: url(image/svg/santa_right_run_five.svg); }
 
-.santa{
+.santa {
     position: absolute;
     left: 40vw;
     top: 60vh;
@@ -95,5 +95,4 @@ body.five .santa.right.run { background-image: url(image/svg/santa_right_run_fiv
     background-color: rgb(30, 83, 255);
     color: white;
     font-family: 'Courier New', Courier, monospace;
-    
 }

@@ -2,13 +2,14 @@ const snow = document.querySelector('.snow');
 const sceneStart = document.querySelector('.scene.start');
 const button = document.querySelector('.startbutton');
 
+//
 // スタートボタンで隠す
-
+//
 const hideStartScene = function() {
     sceneStart.classList.add('hidden');
     const convertToMS = function(h, m, s) {
         return (
-            (h * 60 * 60 * 1000) + 
+            (h * 60 * 60 * 1000) +
             (m      * 60 * 1000) +
             (s           * 1000)
         );
@@ -21,9 +22,9 @@ const hideStartScene = function() {
 button.ontouchstart = hideStartScene;
 button.onmousedown = hideStartScene;
 
-
+//
 // 雪を複製する
-
+//
 const snowList = [];
 
 for (let count = 0; count < 10; count += 1) {
@@ -41,9 +42,9 @@ for (let count = 0; count < 10; count += 1) {
     snowList.push(snow);
 }
 
-
+//
 // 雪を動かす
-
+//
 const animateSnow = function() {
     for (let i = 0; i < snowList.length; i++) {
         const snow = snowList[i];
@@ -58,7 +59,8 @@ const animateSnow = function() {
         
         if (xMax <= x) {
             x -= xMax;
-        } 
+        }
+        
         if (yMax <= y) {
             y -= yMax;
         }
@@ -69,4 +71,5 @@ const animateSnow = function() {
 
     requestAnimationFrame(animateSnow);
 };
+
 requestAnimationFrame(animateSnow);

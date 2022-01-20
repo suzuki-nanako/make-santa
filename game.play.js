@@ -72,6 +72,7 @@ const clothesList = [];
 
 for (let count = 0; count < 10; count += 1) {
     const clothes = document.createElement('div');
+    
     clothes.classList.add('clothes');
     scenePlay.appendChild(clothes);
 
@@ -90,7 +91,7 @@ for (let count = 0; count < 10; count += 1) {
         // const a = Math.random();
         // const b = a * 2;
         // const c = Math.floor(b);
-    
+
         // return clothes[c];
     };
 
@@ -112,6 +113,7 @@ const scoreDiv = document.querySelector('.scoreBoard');
 let score = 0;
 
 scoreDiv.innerHTML = score;
+
 const animateClothes = function() {
     
     requestAnimationFrame(animateClothes);
@@ -148,7 +150,8 @@ const animateClothes = function() {
         } else {
             clothesY += Math.random() * 7;
             clothes.style.top = `${clothesY}px`;
-        } 
+        }
+        
         if (50 < c) {
             continue;
         }
@@ -172,6 +175,7 @@ const animateClothes = function() {
         console.log('+1 POINT!!!');
         score += 1;
         scoreDiv.innerHTML = score;
+        
         if (50 <= score) {
             console.log('level5');
             document.body.classList.remove('one', 'two', 'three', 'four');
@@ -193,12 +197,7 @@ const animateClothes = function() {
             document.body.classList.remove('one', 'two', 'three', 'four', 'five');
             document.body.classList.add('one');
         }
-                    
-            
-            
     }
-    
-    
 };
 
 requestAnimationFrame(animateClothes);
@@ -215,6 +214,7 @@ const showTime = function(t) {
     if (t < 0) {
         t = 0;
     }
+    
     const hh = Math.floor(t / (60 * 60 * 1000)     ).toString().padStart(2, '0');
     const mm = Math.floor(t / (     60 * 1000) % 60).toString().padStart(2, '0');
     const ss = Math.floor(t / (          1000) % 60).toString().padStart(2, '0');
@@ -226,16 +226,20 @@ let requestId;
 
 const calcTime = function() {
     requestId = requestAnimationFrame(calcTime);
+    
     if (window.app.isGameStarted) {
         const currentTime = Date.now();
+        
         showTime(window.app.timelimit - currentTime);
+        
         if (window.app.timelimit <= currentTime) {
-            console.log('時間切れだよ!');
-            scenePlay.classList.add('hidden'); 
             const end = document.querySelector('.scene.end');
+            
+            console.log('時間切れだよ!');
+            scenePlay.classList.add('hidden');
             end.classList.remove('hidden');
             cancelAnimationFrame(requestId);
-            window.app.isGameStarted = false; 
+            window.app.isGameStarted = false;
         }
     }
 };
@@ -243,6 +247,7 @@ const calcTime = function() {
 requestId = requestAnimationFrame(calcTime);
 
 const back = document.querySelector('.back');
+
 back.ontouchstart = handleBack;
 back.onmousedown = handleBack;
 
